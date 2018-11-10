@@ -4,6 +4,9 @@ import AuctionPageTemplate from "./AuctionPageTemplate";
 import AllProductCard from "./AllProductCard";
 import { Grid, Row, Col } from "react-bootstrap";
 import "../css/App.css";
+import ReactDOM from "react-dom";
+import DataProvider from "./DataProvider";
+import Table from "./Table";
 
 class App extends Component {
   render() {
@@ -16,7 +19,9 @@ class App extends Component {
               <strong>For side nav-bar</strong>
             </Col>
             <Col id="second-col" md={8}>
-              {/* Component */}
+            <DataProvider endpoint="api/lead/" 
+                render={data => <Table data={data} />} />
+              <AllProductCard></AllProductCard>
             </Col>
             <Col md={2}>
               <strong style={{ color: "orange" }}>For ad?</strong>

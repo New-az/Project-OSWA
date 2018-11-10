@@ -15,9 +15,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "webpack --mode development ./src/frontend/src/index.js --output ./src/frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./src/frontend/src/index.js --output ./src/frontend/static/frontend/main.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +28,28 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "description": "Since the street wear is upcoming trends nowaday, so we came out with an idea that is to do an e-auction web application.By using this application, user be able to join the others bidding and also can create their own auction. The application is look similar to the well-know web like ebay-auction.",
+  "main": "index.js",
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "weak-key": "^1.0.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KorawitRupanya/Project-OSWA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KorawitRupanya/Project-OSWA/issues"
+  },
+  "homepage": "https://github.com/KorawitRupanya/Project-OSWA#readme"
 }
